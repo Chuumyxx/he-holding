@@ -1,30 +1,32 @@
-# Cek Aktual — Stok HE Hatchery Papua
+# HE HOLDING — Cek Aktual (Paket Lengkap)
 
-Aplikasi web mandiri untuk menghitung stok fisik HE dan CSR serta membandingkannya dengan angka stok data.
+Paket mandiri untuk GitHub Pages. Tidak terhubung ke Spreadsheet atau database.
+Data aplikasi disimpan lokal pada browser/perangkat yang digunakan.
 
-## Menjalankan
-Buka `index.html` langsung di browser, atau publikasikan folder ini melalui GitHub Pages.
+## File
+- `index.html` — halaman aplikasi, sudah terhubung ke manifest dan ikon.
+- `style.css` — tampilan responsif.
+- `script.js` — kalkulasi dan interaksi.
+- `manifest.json` — nama aplikasi dan konfigurasi ikon.
+- `icon-192.png`, `icon-512.png` — ikon aplikasi.
+- `apple-touch-icon.png` — ikon perangkat Apple.
+- `favicon-32.png`, `favicon-64.png` — ikon tab browser.
 
-## Fitur
-- Kalkulator HE: Keranjang 210/180, Setter Tray 42/36.
-- Kalkulator CSR: Keranjang 210/180, Tray kertas 150.
-- Hitungan fisik dipisahkan menurut asal HE dan CSR.
-- Perbandingan Stok HE, Stok CSR, dan Stok HE + CSR.
-- Preview, laporan teks WhatsApp, ekspor CSV yang dapat dibuka di Excel, dan ekspor gambar SVG.
-- Penyimpanan hitungan fisik pada localStorage browser.
+## Upload ke GitHub
+1. Ekstrak ZIP ini.
+2. Buka repository `he-holding`.
+3. Unggah SEMUA file di dalam folder `he-holding` ke root repository, timpa file lama.
+4. Commit changes.
+5. Pastikan Settings → Pages memakai branch `main` dan folder `/ (root)`.
 
-## Aturan hitung
-- Keranjang 210 = 210 butir; kalkulator juga menerima tambahan Tray 42 dan eceran.
-- Keranjang 180 = 180 butir; kalkulator juga menerima tambahan Tray 36 dan eceran.
-- Setter Tray 42: (R + L) × 168 + eceran.
-- Setter Tray 36: (R + L) × 144 + eceran.
-- Tray kertas 150: ikat × 150 + tray × 30 + eceran.
-- Selisih = stok aktual − stok data.
+## Pasang ulang ikon di HP
+1. Hapus shortcut lama dari layar utama.
+2. Buka `https://chuumyxx.github.io/he-holding/` melalui Chrome.
+3. Refresh halaman; bila perlu hapus cache situs.
+4. Pilih menu Chrome → Tambahkan ke layar utama / Install app.
 
-## Catatan penting
-Aplikasi ini dibuat mandiri berdasarkan spesifikasi yang diberikan, bukan hasil ekstraksi dari `Index.html` asli karena file sumber aplikasi utama belum diunggah. Karena itu, ini merupakan implementasi standalone awal. Data `localStorage` hanya tersimpan di browser/perangkat yang sama dan tidak sinkron antarperangkat. Tombol Gambar menghasilkan file SVG; tombol Excel menghasilkan CSV kompatibel dengan Excel.
-
-## GitHub Pages
-1. Buat repository GitHub, lalu unggah keempat file ini.
-2. Buka **Settings → Pages**.
-3. Pilih **Deploy from a branch**, branch `main`, folder `/ (root)`, lalu Save.
+## Catatan
+- Ikon baru sudah ditautkan dari `index.html`.
+- GitHub Pages harus selesai membangun sebelum perubahan terlihat.
+- Browser/Android dapat menyimpan ikon lama dalam cache.
+- Data lokal tidak otomatis tersinkron antarperangkat atau antar-browser.

@@ -1,22 +1,32 @@
-HE HOLDING – PAKET IKON
+# HE HOLDING — Cek Aktual (Paket Lengkap)
 
-Isi:
-- icon-192.png dan icon-512.png: ikon PWA / layar utama
-- apple-touch-icon.png: ikon iOS/iPadOS
-- favicon-32.png dan favicon-64.png: favicon browser
-- manifest.json: nama dan konfigurasi ikon aplikasi
+Paket mandiri untuk GitHub Pages. Tidak terhubung ke Spreadsheet atau database.
+Data aplikasi disimpan lokal pada browser/perangkat yang digunakan.
 
-CARA PASANG:
-1. Unggah semua file PNG dan manifest.json ke folder root repository he-holding.
-2. Tambahkan baris berikut di dalam bagian <head> pada index.html:
+## File
+- `index.html` — halaman aplikasi, sudah terhubung ke manifest dan ikon.
+- `style.css` — tampilan responsif.
+- `script.js` — kalkulasi dan interaksi.
+- `manifest.json` — nama aplikasi dan konfigurasi ikon.
+- `icon-192.png`, `icon-512.png` — ikon aplikasi.
+- `apple-touch-icon.png` — ikon perangkat Apple.
+- `favicon-32.png`, `favicon-64.png` — ikon tab browser.
 
-<link rel="manifest" href="./manifest.json">
-<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32.png">
-<link rel="icon" type="image/png" sizes="64x64" href="./favicon-64.png">
-<link rel="apple-touch-icon" href="./apple-touch-icon.png">
-<meta name="theme-color" content="#0b663c">
+## Upload ke GitHub
+1. Ekstrak ZIP ini.
+2. Buka repository `he-holding`.
+3. Unggah SEMUA file di dalam folder `he-holding` ke root repository, timpa file lama.
+4. Commit changes.
+5. Pastikan Settings → Pages memakai branch `main` dan folder `/ (root)`.
 
-3. Commit changes dan tunggu GitHub Pages diperbarui.
-4. Hapus shortcut lama di HP, buka ulang situs, lalu pilih Tambahkan ke layar utama / Install app.
+## Pasang ulang ikon di HP
+1. Hapus shortcut lama dari layar utama.
+2. Buka `https://chuumyxx.github.io/he-holding/` melalui Chrome.
+3. Refresh halaman; bila perlu hapus cache situs.
+4. Pilih menu Chrome → Tambahkan ke layar utama / Install app.
 
-Catatan: Paket ini berisi aset ikon dan manifest. index.html tetap perlu ditambahkan baris tautan manifest di atas agar browser mengenali ikon aplikasi.
+## Catatan
+- Ikon baru sudah ditautkan dari `index.html`.
+- GitHub Pages harus selesai membangun sebelum perubahan terlihat.
+- Browser/Android dapat menyimpan ikon lama dalam cache.
+- Data lokal tidak otomatis tersinkron antarperangkat atau antar-browser.
